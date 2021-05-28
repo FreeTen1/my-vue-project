@@ -1,20 +1,26 @@
 <template>
   <div id="app">
-    <shop name="Смартфоны"/>
+    <div id="nav">
+      <router-link to="/">Main</router-link> |
+      <router-link to="/Shop">Shop</router-link> |
+      <router-link to="/Car">Cars</router-link> |
+      <router-link to="/ToDo">To Do</router-link>
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <script>
-import Shop from "@/components/Shop";
 export default {
   components: {
-    Shop
   }
 }
 </script>
 
 <style lang="scss">
 #app {
+  align-items: center;
+  flex-direction: column;
   display: flex;
   justify-content: center;
   font-family: Avenir, Helvetica, Arial, sans-serif;
